@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        padding-top: 90px;
+    }
+    
+     .container {
+        margin: 80px auto 60px; 
+        
+        padding: 10px;
+       position: relative;
+       top: 99px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        margin-bottom:10%;
+        margin-top: 15%;
+    } 
+    .form-row {
+        display: flex;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    .form-row input, .form-row textarea {
+        font-size: 14px;
+        padding: 8px;
+        margin: 5px 0;
+        width: calc(100%-16px);
+        height:40px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing:border-box;
+    }
+    .form-row .half {
+        width: 50%;
+        margin-right: 4%;
+        height: auto;
+    }
+    .form-row .half:last-child {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .form-row .half1{
+        width: 100%;
+    }
+    .form-row textarea {
+        resize: none;
+        height: 80px; 
+        font-size: 14px;
+        padding: 10px;
+        margin: 5px 0;
+        width: 100%;
+        height:40px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing:border-box;
+    
+    }
+    .form-add textarea{
+        width: 100%;
+        resize: none;
+        height: 80px; 
+        font-size: 14px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .form-row button {
+        padding: 8px;
+        background-color:#E9B8B1;
+        color: black;
+        border: none;
+        cursor: pointer;
+        box-sizing:border-box;
+    }
+    .form-row button:hover {
+        background-color:#ccc;
+    }
+    .form-row .upload {
+        width: 48%;
+    }
+   /*  html, body {
+        height: 100%;
+        overflow-y: auto;
+    } */
+</style>
+
+
+
+<body>
+  <header>
+    <div class="logo">Preplify</div>
+    
+    <nav>
+        <ul>
+            <li><a href="#" style="font-size: 20px;">Home</a></li>
+            <li><a href="#" style="font-size: 20px;">About</a></li>
+            <li><a href="courses.html" style="font-size: 20px; font-weight: 900;  color:rosybrown;" >Courses</a></li>
+            <li><a href="#" style="font-size: 20px;">Quizzes</a></li>
+            <li><a href="#" style="font-size: 20px;">Contact</a></li>
+        </ul>
+    </nav>
+  
+</header>
+
+
+
+
+
+<div class="layout">
+ 
+  <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+  </div>
+
+ 
+  <aside class="sidebar" id="sidebar">
+      <div class="search-container">
+          <input type="text" class="search-bar" placeholder="Search">
+      </div>
+      <ul class="menu">
+          <li><i class="fas fa-home"></i> Dashboard</li>
+          <li><i class="fas fa-calendar-alt"></i> Calendar</li>
+          <li><i class="fas fa-chart-bar"></i> Forms & Charts</li>
+          <li><i class="fas fa-comments"></i> Discussion Forum</li>
+          <li><i class="fas fa-code"></i> Coding Challenges</li>
+          <li id="resumeMaker">
+            
+                <i class="fas fa-file-alt"></i> Resume Maker
+            </a>
+          </li>
+          <li><i class="fas fa-question-circle"></i> Question Patterns</li>
+          <li><i class="fas fa-briefcase"></i> Jobs Posting Section</li>
+          <li><i class="fas fa-user-lock"></i> Authentication</li>
+      </ul>
+      <div class="profile-section">
+          <img src="img/profile.png" alt="Profile Picture">
+          <span>Zifa Dravin</span>
+      </div>
+  </aside>
+</div>
+
+
+    <div class="container">
+    <form action="#" method="POST" enctype="multipart/form-data">
+       
+        <div class="form-row">
+            <label for="resume" style="width: 100%; margin-bottom: 5px;">Upload Existing Resume</label>
+            <input type="file" class="half" name="resume" id="resume">
+            <a href="https://www.linkedin.com" target="_blank">
+                <button type="button" class="half">Import LinkedIn Profile</button>
+            </a>
+        </div>
+    
+       
+        <div class="form-row">
+            <textarea name="desiredJob" id="desiredJob" placeholder="Desired Job Position"></textarea>
+        </div>
+    
+      
+        <div class="form-row">
+             <label for="photo" style="width: 100%; margin-bottom: 5px;">Upload Photo</label>
+            <input type="file" name="photo" id="photo" class="upload" accept="image/*">
+            <div class="half1">
+                <input type="text" name="firstName" placeholder="First Name" class="half1">
+           
+                <input type="text" name="familyName" placeholder="Family Name" class="half1">
+            </div>
+        </div>
+    
+    
+        <div class="form-row">
+            <input type="email" name="email" placeholder="Email Address" class="half1">
+            <input type="tel" name="phone" placeholder="Phone Number" class="half1">
+        </div>
+    
+      
+        <div class="form-add">
+            <textarea name="address" placeholder="Address"></textarea>
+        </div>
+        <div class="form-row">
+            <div class="half1">
+            <input type="text" name="pincode" placeholder="Pincode" class="half1">
+            <div class="half2">
+            <input type="text" name="city" placeholder="City" class="half1">
+            </div>
+            </div>
+        </div>
+    
+      
+        <div class="form-row">
+            <textarea name="education" placeholder="Education"></textarea>
+        </div>
+        <div class="form-row">
+            <textarea name="languages" placeholder="Languages"></textarea>
+        </div>
+        <div class="form-row">
+            <textarea name="skills" placeholder="Skills"></textarea>
+        </div>
+    
+       
+        <div class="form-row">
+            <button type="submit">Download Resume</button>
+        </div>
+    </form>
+    </div>
+          
+
+
+
+
+
+
+ <footer>
+    <div class="footer-logo">
+        <b><p>PREPLIFY</p></b>
+        <p>Simplifying your path to Placement success <br>
+           we empower students with the tools and <br>
+           knowledge to excel in placements.</p>
+    </div>
+    
+    <div class="support">
+        <b><p>Support</p></b>
+        <p>Start Preparation</p>
+        <p>Mock Test Series</p>
+        <p>Contact Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+    </div>
+    
+    <div class="companies">
+        <b><center><p>Companies</p></center></b>
+        <p>Accenture</p>
+        <p>Cognizant</p>
+        <p>Capgemini</p>
+        <p>Mindtree</p>
+        <p>Hexaware</p>
+    </div>
+    
+    <div class="companies">
+        <br>
+       
+        <p>HCL</p>
+        <p>TCS</p>
+        <p>Infosys</p>
+        <p>Wipro</p>
+        <p>Deloitte</p>
+    </div>
+    
+    <div class="contact">
+        <b><p>Get In Touch</p></b>
+        <p>Phone: +91 123 4567 890</p>
+        <p>Email: contact@preplify.com</p>
+        <p>Connect with us on WhatsApp / Instagram</p>
+    </div>
+    
+    <div class="follow-us">
+        <b><p>Follow Us On</p></b>
+        <p>
+            <img src="img/linkedin.svg" alt="LinkedIn">
+            <img src="img/youtube.svg" alt="YouTube">
+            <img src="img/instagram.svg" alt="Instagram">
+            <img src="img/facebook.svg" alt="Facebook">
+            <img src="img/twitter.svg" alt="twitter">
+            <img src="img/telegram.svg" alt="telegram">
+        </p>
+    </div>
+</footer>
+
+      
+
+  <script>
+   
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+
+
+hamburger.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+});
+
+  </script>
+
+
+
+<script>
+    
+    document.getElementById('resumeMaker').addEventListener('click', function () {
+      
+        window.location.href = 'resume.html';
+    });
+</script>
+</body>
+</html>
